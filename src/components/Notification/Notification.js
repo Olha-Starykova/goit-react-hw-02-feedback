@@ -7,4 +7,8 @@ const Notification = ({ message }) => (
     </>
 );
 
+Notification.prototype = {
+  messageNotification: PropTypes.string.isRequired
+};
+
 export default Notification;

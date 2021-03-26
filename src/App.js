@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Statistics from './components/Statistics/Statistics'
 import FeedbackOptions from './components/FeedbackOptions/FeedbackOptions'
 import Section from './components/Section/Section'
 import Notification from './components/Notification/Notification'
-
+import style from "./App.module.css";
 
 class App extends Component {
+
+ 
+
+    static propTypes = {
+    //
+  };
+
+
   state = {
     good: 0,
     neutral: 0,
@@ -19,6 +26,8 @@ class App extends Component {
 			[name]: prevState[name] + 1
 		}));
   }
+
+
 
 //  goodHandleIncrement = () => {
 //     this.setState(prevState => ({
@@ -63,7 +72,7 @@ class App extends Component {
        
         <Section title="Please leave feedback">
       
-          <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback}
+          <FeedbackOptions options={style} onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
       
